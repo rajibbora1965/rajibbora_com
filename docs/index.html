@@ -4,9 +4,129 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rajib Bora</title>
+  <meta name="description" content="Rajib Bora — operator, architect, and builder working on ICDT (Integrated Cognitive Digital Twin) and applied AI systems." />
+  <style>
+    :root { --max: 860px; }
+    body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.55; }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 64px auto; padding: 0 20px; }
+    h1 { font-size: 44px; letter-spacing: -0.02em; margin: 0 0 10px; }
+    .tagline { font-size: 18px; margin: 0 0 26px; color: #333; }
+    .nav { margin: 22px 0 34px; font-size: 14px; color: #444; }
+    .nav a { text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 2px; margin-right: 14px; }
+    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 18px 18px; margin: 14px 0; }
+    h2 { font-size: 18px; margin: 0 0 8px; letter-spacing: -0.01em; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0 0 18px; }
+    .meta { font-size: 13px; color: #555; margin-top: 6px; }
+    .footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid #eee; font-size: 13px; color: #555; }
+    .small { font-size: 14px; color: #333; }
+    .pill { display: inline-block; font-size: 12px; padding: 4px 10px; border: 1px solid #e6e6e6; border-radius: 999px; margin-right: 8px; color: #444; }
+  </style>
 </head>
+
 <body>
-  <h1>Rajib Bora</h1>
-  <p>Personal site — launching soon.</p>
+  <main class="wrap">
+    <header>
+      <h1>Rajib Bora</h1>
+      <p class="tagline">Operator → architect → builder. Applied AI, digital twins, and execution systems.</p>
+
+      <div class="nav" aria-label="Site navigation">
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="small">
+        I’m building and documenting <strong>ICDT</strong> — <em>Integrated Cognitive Digital Twin</em> —
+        a platform architecture for persistent, privacy-first intelligence that connects workflows, memory, and specialized agents.
+      </p>
+
+      <p class="meta">
+        Current focus: MIT xPRO “AI for Senior Leaders” capstone + applied builds in Oilfield Operations and Career Intelligence.
+      </p>
+
+      <div style="margin-top:14px;">
+        <span class="pill">ICDT</span>
+        <span class="pill">Digital Twins</span>
+        <span class="pill">AI Agents</span>
+        <span class="pill">Operations</span>
+      </div>
+    </header>
+
+    <section id="projects" style="margin-top:38px;">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h2>ICDT — Integrated Cognitive Digital Twin</h2>
+        <p>
+          A shared backbone architecture for building domain “twins” that combine curated data, workflow context,
+          and agent orchestration to support decisions over time. Designed to be owner-controlled, explainable,
+          and extensible across verticals.
+        </p>
+        <p class="meta">Status: active architecture + pilots. Public-safe details only.</p>
+      </div>
+
+      <div class="card">
+        <h2>Oilfield Operations Digital Twin (Arahas Pilot)</h2>
+        <p>
+          A domain vertical focused on end-to-end oilfield value: (1) confidence in recoverable reserves and (2) daily production by well.
+          Starting with directional drilling workflows, building a “Well Digital Twin” foundation that can expand across drilling,
+          completions, and production monitoring.
+        </p>
+        <p class="meta">Status: pilot-ready workflows; expanding toward Phase 2 using anonymized test-well data.</p>
+      </div>
+
+      <div class="card">
+        <h2>InterviewGate™ — Career Concierge</h2>
+        <p>
+          A privacy-first career intelligence tool that helps job seekers align resumes and materials to target roles.
+          Built as a step toward a persistent “Career Digital Twin” that improves over time.
+        </p>
+        <p class="meta">Status: live SaaS prototype; evolving into a broader concierge model.</p>
+      </div>
+    </section>
+
+    <section id="writing" style="margin-top:38px;">
+      <h2>Writing</h2>
+      <div class="card">
+        <p>
+          I publish selectively — durable notes, architecture thinking, and synthesis from executive education and real-world builds.
+        </p>
+        <ul>
+          <li><a href="./homepage-draft.md">Homepage draft notes</a> (working)</li>
+          <li><a href="./mit-xpro-synthesis.md">MIT xPRO synthesis</a> (working)</li>
+          <li><a href="./project-icdt.md">ICDT notes</a> (working)</li>
+        </ul>
+        <p class="meta">These links currently point to working documents in this repo’s published /docs folder.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:38px;">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>
+          Best for: strategic collaboration, partner discussions, or domain problems where digital twins + applied AI can create measurable value.
+        </p>
+        <p class="meta">
+          Email: <a href="mailto:rajib.bora@icloud.com">rajib.bora@proton.me</a>
+          <!-- Replace with your preferred email address -->
+        </p>
+        <p class="meta">
+          LinkedIn: <a href="https:www.linkedin.com/in/rajibbora">Add your profile link</a>
+          <!-- Replace with your LinkedIn URL -->
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Rajib Bora</div>
+      <div class="meta">This site is intentionally minimal and evolves deliberately.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
