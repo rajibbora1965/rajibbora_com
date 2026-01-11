@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICDT Architecture — Private Brief</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+        :root {
+            --max: 720px;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fcfcfc;
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        /* Gate Styles */
+        #gate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+        }
+
+        #gate h1 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        input[type="password"] {
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            width: 260px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="password"]:focus {
+            border-color: #333;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #111;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 294px;
+            /* match input width + padding */
+            font-weight: 500;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        .error {
+            color: #d93025;
+            font-size: 14px;
+            margin-top: 12px;
+            display: none;
+        }
+
+        /* Content Styles */
+        #content {
+            display: none;
+            /* hidden by default */
+        }
+
+        .header-note {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+            margin-bottom: 48px;
+        }
+
+        h1 {
+            font-size: 32px;
+            letter-spacing: -0.02em;
+            margin: 0 0 16px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 42px 0 16px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #111;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 24px 0 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        p {
+            margin: 16px 0;
+            color: #333;
+        }
+
+        ul {
+            margin: 16px 0;
+            padding-left: 20px;
+            color: #333;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 42px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #eee;
+            margin: 64px 0;
+            border: none;
+        }
+
+        .status-box {
+            background: #f5f5f5;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 42px;
+            font-size: 15px;
+        }
+
+        .status-box h3 {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .footer-link {
+            margin-top: 60px;
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+        .footer-link a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ACCESS GATE -->
+    <div class="container" id="gate">
+        <h1>Restricted Access</h1>
+        <form id="gate-form">
+            <div>
+                <input type="password" id="passcode-input" placeholder="Enter access code" autocomplete="off" />
+            </div>
+            <div>
+                <button type="submit">Unlock</button>
+            </div>
+            <div id="error-msg" class="error">Access denied. Verification failed.</div>
+        </form>
+    </div>
+
+    <!-- EXPLAINER CONTENT -->
+    <div class="container" id="content">
+        <div class="header-note">Private explainer · Not for redistribution</div>
+
+        <h1>ICDT Core Architecture</h1>
+        <p class="lead">
+            The <em>Integrated Cognitive Digital Twin</em> is a backbone for persistent, owner-controlled intelligence.
+            It connects static data to dynamic workflow state, enabling systems that reason rather than just report.
+        </p>
+
+        <h2>The Core Concept: Twin–Artifact–Lens</h2>
+        <p>
+            The architecture decouples the "truth" of an entity from how it is viewed or acted upon:
+        </p>
+        <ul>
+            <li><strong>Twin:</strong> The persistent, evolving digital identity of an asset (well, person, system).
+            </li>
+            <li><strong>Artifacts:</strong> Evidence and outputs generated by the twin over time (reports, logs,
+                verified states).</li>
+            <li><strong>Lenses:</strong> Role-specific views into the twin (e.g., an Engineer View vs. an Investor
+                View), ensuring stakeholders see only what is relevant.</li>
+        </ul>
+
+        <hr class="section-divider" />
+
+        <h2>System Layers</h2>
+
+        <h3>1. Data Ingestion & Curation</h3>
+        <p>
+            Raw data is never trusted blindly. The ingestion layer validates, normalizes, and semantically tags incoming
+            telemetry before it enters the twin’s memory. This separates "noise" from "signal" at the source.
+        </p>
+
+        <h3>2. Memory Layer</h3>
+        <p>
+            A persistent, owner-controlled graph that stores not just the <em>current state</em>, but the <em>history of
+                state changes</em> and the decisions that drove them. This enables "time-travel" debugging and auditable
+            chains of custody.
+        </p>
+
+        <h3>3. Workflow Layer</h3>
+        <p>
+            Awareness of the "job to be done." The system understands where an asset is in its lifecycle (e.g.,
+            "Drilling - 12.25in Section"). This allows agents to apply context-specific rules rather than generic
+            thresholds.
+        </p>
+
+        <h3>4. Agent Orchestration</h3>
+        <p>
+            Specialized, narrow-scope agents (e.g., "Survey QA Agent," "Torque & Drag Monitor") operate autonomously
+            within the twin. A central orchestrator routes information to the right agent and resolves conflicts,
+            preventing agent collision.
+        </p>
+
+        <h3>5. Governance & Presentation</h3>
+        <p>
+            A rigorous permissioning layer ensures that while the twin holds the total truth, external users (partners,
+            regulators, investors) access only permissible views (Lenses). Use of deterministic logic for
+            safety-critical decisions builds trust that probabilistic AI cannot achieve alone.
+        </p>
+
+        <h2>Logic Philosophy: Deterministic + Probabilistic</h2>
+        <p>
+            Trust requires predictability. ICDT enforces a strict separation of concerns:
+        </p>
+        <ul>
+            <li><strong>Deterministic (Rules/Physics):</strong> Used for safety limits, engineering constraints, and
+                compliance. If X > Y, stop. No hallucination allowed.</li>
+            <li><strong>Probabilistic (LLMs/ML):</strong> Used for trend analysis, anomaly detection, and natural
+                language synthesis. "This looks like a washout."</li>
+        </ul>
+
+        <h2>Security & Integration</h2>
+        <p>
+            <strong>Owner Control:</strong> The architecture is designed for sovereign data ownership. The twin lives in
+            the owner's environment, not a vendor's black box.
+            <br>
+            <strong>Coexistence:</strong> ICDT is not a "rip-and-replace" solution. It sits alongside existing SCADA and
+            ERP systems, ingesting their outputs to build higher-order intelligence.
+        </p>
+
+        <div class="status-box">
+            <h3>Current Status</h3>
+            <p style="margin:0;">
+                Architecture defined. Workflows modeled. Implementation staged.
+            </p>
+        </div>
+
+        <div class="footer-link">
+            <a href="/">← Return to Home</a>
+        </div>
+
+    </div>
+
+    <script src="./gate.js"></script>
+</body>
+
+</html>

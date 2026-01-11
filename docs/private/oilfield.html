@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICDT — Oilfield Operations</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+        :root {
+            --max: 720px;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fcfcfc;
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        /* Gate Styles */
+        #gate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+        }
+
+        #gate h1 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        input[type="password"] {
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            width: 260px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="password"]:focus {
+            border-color: #333;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #111;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 294px;
+            /* match input width + padding */
+            font-weight: 500;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        .error {
+            color: #d93025;
+            font-size: 14px;
+            margin-top: 12px;
+            display: none;
+        }
+
+        /* Content Styles */
+        #content {
+            display: none;
+            /* hidden by default */
+        }
+
+        .header-note {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+            margin-bottom: 48px;
+        }
+
+        h1 {
+            font-size: 32px;
+            letter-spacing: -0.02em;
+            margin: 0 0 16px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 42px 0 16px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #111;
+        }
+
+        p {
+            margin: 16px 0;
+            color: #333;
+        }
+
+        ul {
+            margin: 16px 0;
+            padding-left: 20px;
+            color: #333;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 42px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #eee;
+            margin: 64px 0;
+            border: none;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .status-box {
+            background: #f5f5f5;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 42px;
+            font-size: 15px;
+        }
+
+        .status-box h3 {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #111;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ACCESS GATE -->
+    <div class="container" id="gate">
+        <h1>Restricted Access</h1>
+        <form id="gate-form">
+            <div>
+                <input type="password" id="passcode-input" placeholder="Enter access code" autocomplete="off" />
+            </div>
+            <div>
+                <button type="submit">Unlock</button>
+            </div>
+            <div id="error-msg" class="error">Access denied. Verification failed.</div>
+        </form>
+    </div>
+
+    <!-- EXPLAINER CONTENT -->
+    <div class="container" id="content">
+        <div class="header-note">Private explainer · Not for redistribution</div>
+
+        <h1>ICDT Oilfield Operations</h1>
+        <p class="lead">
+            A domain-native implementation of the <em>Integrated Cognitive Digital Twin</em> architecture,
+            designed to align operational data with owner-driven value.
+        </p>
+
+        <h2>The Core Concept</h2>
+        <p>
+            Oilfield Operations generates massive data velocity, yet decision-quality signal often remains fragmented
+            across silos.
+            <strong>ICDT (Integrated Cognitive Digital Twin)</strong> is an architectural approach that unifies this
+            data not just
+            spatially or temporally, but <em>cognitively</em>—linking raw telemetry to the specific workflows and
+            decisions
+            operators make every day.
+        </p>
+
+        <hr class="section-divider" />
+
+        <h2>Operational Value</h2>
+        <p>
+            This implementation focuses relentlessly on two owner-level outcomes:
+        </p>
+        <ul>
+            <li>
+                <strong>Confidence in Recoverable Reserves:</strong> Ensuring that well placement and spacing decisions
+                are based on a
+                consistent, verified understanding of the subsurface reality as it is drilled.
+            </li>
+            <li>
+                <strong>Visibility into Daily Production:</strong> Providing an unobstructed, real-time view of well
+                performance and
+                operational bottlenecks, independent of service-company reporting layers.
+            </li>
+        </ul>
+
+        <h2>Architecture Principles</h2>
+        <p>
+            The system moves beyond passive dashboards by embedding intelligence directly into the data structure:
+        </p>
+        <ul>
+            <li>
+                <strong>Curated over Raw:</strong> Input data is cleansed and normalized at ingestion, ensuring
+                downstream agents consume only trusted signal.
+            </li>
+            <li>
+                <strong>Workflow-Contextual Intelligence:</strong> Data is organized by the <em>job to be done</em>
+                (e.g., "Landing the Curve") rather than just by sensor type.
+            </li>
+            <li>
+                <strong>Agent Orchestration:</strong> Specialized autonomous agents monitor specific streams (e.g.,
+                directional surveys, drilling parameters) and trigger alerts only when deviations exceed context-aware
+                thresholds.
+            </li>
+            <li>
+                <strong>Deterministic + Probabilistic:</strong> Combines rigorous physics-based models for engineering
+                certainty with probabilistic AI for trend analysis and anomaly detection.
+            </li>
+        </ul>
+
+        <h2>Scope of Implementation</h2>
+        <p>
+            The architecture is designed to scale across the full well lifecycle:
+        </p>
+        <ul>
+            <li><strong>Drilling:</strong> Real-time geosteering support, anti-collision monitoring, and performance
+                maximization.</li>
+            <li><strong>Completions:</strong> Frac stage visualization and pressure analysis.</li>
+            <li><strong>Production:</strong> Flow assurance monitoring and facility uptime tracking.</li>
+        </ul>
+
+        <h2>Governance & Security</h2>
+        <p>
+            Designed for sovereign ownership, the system ensures that the operator retains full control over the digital
+            asset.
+            Models are <strong>explainable</strong> (no "black boxes" for engineering decisions) and the architecture is
+            <strong>extensible</strong>, allowing internal teams to add proprietary logic without breaking the core
+            backbone.
+        </p>
+
+        <div class="status-box">
+            <h3>Current Status</h3>
+            <p style="margin:0;">
+                Defined architecture and workflows. Ready for domain implementation.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="./gate.js"></script>
+</body>
+
+</html>
