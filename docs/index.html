@@ -106,6 +106,30 @@
       font-size: 13px;
       color: #555;
     }
+
+    /* --- Contact icons --- */
+    .icon-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .icon-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .icon-links svg {
+      width: 16px;
+      height: 16px;
+      fill: #444;
+    }
   </style>
 </head>
 
@@ -215,18 +239,27 @@
           <a href="mailto:rajib.bora@icloud.com">rajib.bora@icloud.com</a>
         </p>
 
-        <p class="meta">
-          Phone / WhatsApp:
-          <a href="https://wa.me/12816858053">+1&nbsp;281&nbsp;685&nbsp;8053</a>
-        </p>
+        <p class="meta">Connect:</p>
 
-        <p class="meta">
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/rajibbora" target="_blank" rel="noopener">
-            linkedin.com/in/rajibbora
+        <div class="icon-links">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/12816858053" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32">
+              <path
+                d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.569 2.136 7.995L0 32l8.205-2.112A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.091a13.05 13.05 0 0 1-6.654-1.822l-.478-.282-4.873 1.255 1.3-4.75-.311-.49A13.03 13.03 0 0 1 2.909 16C2.909 8.764 8.764 2.909 16 2.909S29.091 8.764 29.091 16 23.236 29.091 16 29.091z" />
+              <path
+                d="M23.222 18.798c-.363-.182-2.148-1.06-2.48-1.181-.333-.121-.575-.182-.818.182-.242.363-.939 1.181-1.151 1.424-.212.242-.424.273-.787.091-.363-.182-1.531-.564-2.915-1.799-1.077-.961-1.803-2.148-2.015-2.511-.212-.363-.023-.56.159-.741.164-.163.363-.424.545-.636.182-.212.242-.363.363-.606.121-.242.061-.455-.03-.636-.091-.182-.818-1.97-1.121-2.697-.294-.707-.593-.611-.818-.623l-.697-.012c-.242 0-.636.091-.97.455-.333.363-1.273 1.242-1.273 3.03s1.303 3.515 1.485 3.758c.182.242 2.565 3.915 6.213 5.487.868.375 1.545.599 2.072.767.87.277 1.661.238 2.285.144.697-.104 2.148-.879 2.454-1.727.303-.848.303-1.576.212-1.727-.091-.152-.333-.242-.697-.424z" />
+            </svg>
           </a>
-        </p>
-      </div>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/rajibbora" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.083V9h3.111v1.561h.045c.434-.823 1.494-1.692 3.073-1.692 3.287 0 3.893 2.164 3.893 4.977v6.606zM5.337 7.433a1.805 1.805 0 1 1 0-3.611 1.805 1.805 0 0 1 0 3.611zM6.956 20.452H3.716V9h3.24v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.555C0 23.23.792 24 1.771 24h20.451C23.2 24 24 23.23 24 22.278V1.723C24 .771 23.2 0 22.222 0z" />
+            </svg>
+          </a>
+        </div>
     </section>
 
     <footer class="footer">
