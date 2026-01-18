@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Rajib Bora</title>
+    <meta name="description" content="About Rajib Bora — operator, architect, and builder." />
+
+    <style>
+        :root {
+            --max: 860px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.55;
+            color: #111;
+            background: #fff;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 64px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 44px;
+            letter-spacing: -0.02em;
+            margin: 0 0 10px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            margin: 0 0 26px;
+            color: #333;
+        }
+
+        .nav {
+            margin: 22px 0 34px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .nav a {
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2px;
+            margin-right: 14px;
+        }
+
+        .card {
+            border: 1px solid #e6e6e6;
+            border-radius: 14px;
+            padding: 18px 18px;
+            margin: 14px 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0 0 8px;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 10px 0 0 18px;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        .small {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            border: 1px solid #e6e6e6;
+            border-radius: 999px;
+            margin-right: 8px;
+            color: #444;
+        }
+
+        .footer {
+            margin-top: 46px;
+            padding-top: 18px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+
+        <header>
+            <h1>About</h1>
+            <p style="max-width: 660px; font-size: 18px; color: #333; margin-top: 24px;">
+                I’ve spent three decades operating in complex, safety-critical environments where decisions have real
+                consequences. That experience shaped how I think about systems: reliability, clarity, and execution
+                under constraints. Today, I design and build applied AI and digital twin platforms that bring those same
+                principles into software.
+            </p>
+        </header>
+
+        <section style="margin-top:42px;">
+            <div class="card">
+                <h2>Operator</h2>
+                <p>
+                    I learned the work from the inside: how operations actually run, where risk hides, and what teams
+                    need in the moment. That operator lens keeps my work grounded in reality, not theory.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Architect</h2>
+                <p>
+                    Over time, I focused on system design: how data, workflow context, and governance fit together so
+                    decisions can be made repeatedly and responsibly. I care about explainability, ownership, and
+                    controls because operational systems require trust.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Builder</h2>
+                <p>
+                    I build production-grade platforms, not demos. My focus is scalable architecture, clean interfaces,
+                    and data-driven behavior that can evolve across domains.
+                </p>
+            </div>
+        </section>
+
+        <section style="margin-top:38px;">
+            <h2>What I’m building</h2>
+            <div class="card">
+                <ul>
+                    <li>ICDT: a shared backbone for digital twins and agent orchestration</li>
+                    <li>Oilfield Operations Digital Twin: reserve confidence + daily production visibility</li>
+                    <li>InterviewGate™ Career Digital Twin: private, user-owned career intelligence</li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="margin-top:38px;">
+            <p style="font-size: 16px; color: #333;">
+                If you’re exploring a serious digital twin or applied AI initiative, I’m interested in problems where
+                operational reality matters.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <div><a href="./index.html" style="text-decoration: none;">← Back to Home</a></div>
+            <div class="meta" style="margin-top: 12px;">© <span id="y"></span> Rajib Bora</div>
+        </footer>
+
+    </main>
+
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
