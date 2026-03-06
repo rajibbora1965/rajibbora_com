@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide Deck — Rajib Bora</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .toolbar {
+            background: #111;
+            color: #fff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .toolbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .toolbar a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 44px);
+            /* Subtract toolbar height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Force the iframe to scale properly */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <a href="./index.html">← Back to Rajib Bora</a>
+        <a href="./Alignment-Rajib-to-BN.pdf" download style="font-size: 13px; color: #ccc;">Download PDF</a>
+    </div>
+
+    <div class="pdf-container">
+        <iframe src="./Alignment-Rajib-to-BN.pdf#view=FitH" title="Slide Deck"></iframe>
+    </div>
+
+</body>
+
+</html>
